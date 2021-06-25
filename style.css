@@ -1,0 +1,33 @@
+container1 {
+    display: flex;
+    color: black;
+    text-align: justify;
+    height: auto;
+    padding-top: 30px;
+}
+
+.box-1 {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 10px;
+}
+
+.box-2 {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.box-3 {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
