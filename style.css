@@ -1,0 +1,26 @@
+* {
+    margin: 5px;
+    padding: 2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title {
+    display: flex;
+    background-image: url(https://pbs.twimg.com/media/Dbfey3KV0AIj6Tm.jpg:large);
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    font-size: 60px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.sunset-container {
+    border-radius: 800px;
+}
+
