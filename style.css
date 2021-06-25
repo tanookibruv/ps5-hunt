@@ -1,7 +1,7 @@
 * {
     margin: 5px;
     padding: 2px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .title {
@@ -14,7 +14,7 @@
 
 .title h1 {
     font-size: 60px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
@@ -24,3 +24,36 @@
     border-radius: 800px;
 }
 
+container1 {
+    display: flex;
+    color: black;
+    text-align: justify;
+    height: auto;
+    padding-top: 30px;
+}
+
+.box-1 {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin: 10px;
+}
+
+.box-2 {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.box-3 {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
