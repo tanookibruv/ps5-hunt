@@ -1,42 +1,8 @@
-//var requestUrl = 'https://www.icalendar37.net/lunar/api/?';
+var requestUrl = 'https://www.icalendar37.net/lunar/api/?';
 
-//var xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
-//xhr.onreadystatechange = function () {
-// if (xhr.onreadystatechange == XMLHttpRequest.DONE) {
-//     console.log('XMHLttpRequest Response \n-------------');
-//     console.log(xhr.response);
-// }
-//};
-//xhr.open('GET', requestUrl, true);
-//xhr.send();
-
-//$.ajax({
-//    url: requestUrl,
-//    method: 'GET',
-//}).then(function (response) {
-//    console.log('Ajax Response \n-------------');
-//    console.log(response);
-//})
-
-//tryin out the js provided by API
-function phases (obj,callback) {
- var gets=[]
- for (var i in obj) {
-     gets.push(i + "=" + encodeURIComponent(obj[i]))
- }
- gets.push("LDZ=" + new Date(obj.year,obj.month-1,1)/1000)
- var xmlhttp = new XMLHttpRequest();
- var url = "https://www.icalendar37.net/lunar/api/?" + gets.join("&")
- xmlhttp.onreadystatechange = function(){
-    if(xmlhttp.readyState ==4 && xmlhttp.status == 200) {
-        callback(JSON.parse(xmlhttp.responseText))
-    }
-}
-xmlhttp.open("GET", url, true)
-xmlhttp.send()
-}
-
+//used code from: "http://www.wdisseny.com/lluna/?lang=en#ex_04"
 function moonphase(moon){
     phMax = []
     for (var nDay in moon.phase){
@@ -51,12 +17,21 @@ function moonphase(moon){
         }
     }
     var width = 100 / phMax.length
-    var html = "<b>"+ moon.monthName+ "+ moon.year + </b>"
+    var html = "<b>"+ moon.monthName+ ""+ moon.year + "</b>"
     phMax.forEach(function(element){
-        html += '<div style="width:"+width+%">' + element +'</div>'
+        html += '<div style="width:'+width+'%">' + element + '</div>' 
     })
     document.getElementById("moon-phase").innerHTML = html
 }
+
+xhr.onreadystatechange = function () {
+ if (xhr.onreadystatechange == XMLHttpRequest.DONE) {
+     console.log('XMHLttpRequest Response \n-------------');
+     console.log(xhr.response);
+ }
+};
+xhr.open('GET', requestUrl, true);
+xhr.send();
 var configMoon ={
     lang: 'en',
     month: new Date().getMonth() + 1,
@@ -66,4 +41,17 @@ var configMoon ={
     shadeColor: "transparent",
     texturize: true,
 }
-phases(configMoon,moonphase)
+var gets=[]
+ for (var i in configMoon) {
+     gets.push(i + "=" + encodeURIComponent(configMoon[i]))
+ }
+ gets.push("LDZ=" + new Date(configMoon.year,configMoon.month-1,1)/1000)
+$.ajax({
+    url: requestUrl + gets.join("&"),
+    method: 'GET',
+}).then(function (response) {    console.log('Ajax Response \n-------------');
+    console.log(response);
+    moonphase(JSON.parse(response))
+})
+
+

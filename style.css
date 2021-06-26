@@ -57,3 +57,8 @@ container1 {
     align-items: center;
     margin: 10px;
 }
+
+#moon-phase {
+    border-style: solid;
+    border-color: black;
+}
