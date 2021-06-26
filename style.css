@@ -4,9 +4,14 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.mainBack {
+    background: #01749c
+}
+
 .title {
     display: flex;
-    background-image: url(https://pbs.twimg.com/media/Dbfey3KV0AIj6Tm.jpg:large);
+    background-image: url(https://i.redd.it/ogik3x9ydod01.png);
+    background-position: center;
     height: 300px;
     align-items: center;
     justify-content: center;
@@ -22,15 +27,16 @@
 
 .sunset-container {
     border-radius: 800px;
+    text-align: center;
 }
 
-container1 {
+/* container1 {
     display: flex;
     color: black;
     text-align: justify;
     height: auto;
     padding-top: 30px;
-}
+} */
 
 .box-1 {
     display: flex;
@@ -56,4 +62,30 @@ container1 {
     justify-content: center;
     align-items: center;
     margin: 10px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+}
+
+.box-4 {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    max-width: 50%;
+}
+
+.box-5 {
+    display: inline-flex;
 }
