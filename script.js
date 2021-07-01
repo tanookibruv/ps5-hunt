@@ -1,4 +1,6 @@
 var requestUrl = 'https://www.icalendar37.net/lunar/api/?';
+var sunriseUrl = 'https://openweathermap.org/current';
+var zipInput = document.querySelector('#userzip-input');
 
 var xhr = new XMLHttpRequest();
 
@@ -55,3 +57,34 @@ $.ajax({
 })
 
 
+//Sunrise and Sunset tracking code
+var riseSetTracker = function (event) {
+    event.preventDefault();
+
+    var zipcode = zipInput
+
+    if (zipcode) {
+        getSunTracker(zipcode);
+    }
+    console.log(zipcode)
+}
+
+var getSunTracker = function (zipcode) {
+    var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + 'us&appid={c0d5f49124cf4cdbd7436b6982c9b2fe}';
+    
+    fetch(apiUrl)
+    .then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data) {
+                displayTracker(data, zipcode);
+            });
+        } else {
+            alert('Error' + response.statusText);
+        }
+    })
+    .catch(function (error) {
+        alert('Unable to retrieve data');
+    })
+}
+
+zipInput.addEventListener('submit', riseSetTracker);

@@ -38,13 +38,6 @@
     text-align: center;
 }
 
-/* .container1 {
-    display: flex;
-    color: black;
-    text-align: justify;
-    height: auto;
-    padding-top: 30px;
-} */
 
 .box-1 {
     display: flex;
@@ -72,31 +65,8 @@
     margin: 10px;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+/*moon-phase coding*/
 
-th,
-td {
-    padding: 5px;
-    text-align: left;
-}
-
-.box-4 {
-    display: flex;
-    flex: 2;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    max-width: 50%;
-}
-
-.box-5 {
-    display: inline-flex;
-}
 #moon-phase {
     border-style: solid;
     border-color: black;
