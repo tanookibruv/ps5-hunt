@@ -1,11 +1,16 @@
 * {
-    margin: 5px;
     padding: 2px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .mainBack {
-    background: #01749c
+    background-color: #01749c;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding-bottom: 20px;
 }
 
 .title {
@@ -28,7 +33,7 @@
 .sunset-container {
     margin: 45px;
     padding: 60px;
-    border-radius: 800px;
+    border-radius: 20px;
     border-style: solid;
     border-color: #febc11;
     border-width: 10px;
@@ -38,6 +43,10 @@
     text-align: center;
 }
 
+
+/* .container1 {
+
+} */
 
 .box-1 {
     display: flex;
@@ -65,31 +74,65 @@
     margin: 10px;
 }
 
-/*moon-phase coding*/
+table,
+th,
+td {
+    table-layout: fixed;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+.box-4 {
+    margin: auto;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #febc11;
+    border-width: 10px;
+    background-color: #fff4c5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.box-5 {
+    display: inline-flex;
+}
 
 #moon-phase {
+    border-radius: 20px;
     border-style: solid;
-    border-color: black;
+    border-color: #febc11;
+    border-width: 10px;
+    background-color: #fff4c5;
     width: auto;
     margin: 20px;
     display: flex;
 }
 
 #moon-phase>b {
-    display:block;
+    display: block;
     text-align: center;
     font-size: 30px;
 }
 
 #moon-phase>div {
-    display:inline-block;
+    display: inline-block;
     vertical-align: top;
     margin: 1px;
     padding: 1px;
 }
 
 #moon-phase>div>div {
-    border: 2px solid black; 
+    border: 2px solid black;
     background-color: white;
 }
 
@@ -106,4 +149,84 @@
 
 #moon-phase>div>div>span {
     font-size: 20px;
+}
+
+#ex3 {
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #fff4c5;
+    padding: 1%;
+    color: black;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #febc11;
+    border-width: 10px;
+}
+
+#isToDay {
+    box-shadow: inset 0 0 0 1px darkgray;
+}
+
+.day_box,
+.name_day,
+.titleCalendar,
+.buttonCalendar {
+    width: calc(100% / 7);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.titleCalendar {
+    width: calc(100% / 7 * 5);
+    font-size: 24px;
+    text-align: center;
+}
+
+.buttonCalendar {
+    background-color: black;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.name_day {
+    overflow: hidden;
+    font-size: 14px;
+    padding: 1px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.day_box {
+    text-align: left!important;
+    font-size: 14px;
+    background-image: linear-gradient(black, #222222);
+    background-size: 97% 97%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.day_box>div {
+    margin: 1px;
+    padding: 5%;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: 95% 95%;
+}
+
+.day_box>div>span {
+    position: absolute;
+    color: white;
+    font-size: 1em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.day_box>div>div {
+    padding: 5% 15%;
 }
