@@ -72,6 +72,8 @@ submitbutton.addEventListener("click", locationData);
 
 
 var requestUrl = 'https://www.icalendar37.net/lunar/api/?';
+var sunriseUrl = 'https://openweathermap.org/current';
+var zipInput = document.querySelector('#userzip-input');
 
 var xhr = new XMLHttpRequest();
 

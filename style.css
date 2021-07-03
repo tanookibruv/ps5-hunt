@@ -104,7 +104,8 @@ td {
 }
 
 .box-5 {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
 }
 
 #moon-phase {
