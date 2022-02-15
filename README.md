@@ -1,4 +1,5 @@
-# sunset-tracker
-Type in your zipcode and see when the sun sets in your area!
-Coming soon: Moon phases!
-Update - Moon phase tracker is live!
+# Sun-Moon Tracker
+
+## Summary:
+A great app for astronomers and Sun enthusiasts! Type in your requested zip code to get the time of either the sunset or sunrise for the perfect view. A chart for the moon phases of the current month as well.
+
